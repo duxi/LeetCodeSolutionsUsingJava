@@ -17,7 +17,8 @@ public class MinStack {
     public void pop() {
         
     }
-
+    
+    //pick up top element
     public int top() {
         
     }
