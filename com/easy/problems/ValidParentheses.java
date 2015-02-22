@@ -5,14 +5,14 @@ import java.util.Stack;
 public class ValidParentheses {
 
 	public boolean isValid(String s) {
-		Stack st = new Stack();
+		Stack<Character> st = new Stack<Character>();
 		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i) == '(' || s.charAt(i) == '{' || s.charAt(i) == '[') {
 				st.push(s.charAt(i));
 			} else {
 				if (st.isEmpty())
 					return false;
-				if (!isValidMatch(st.pop().toString().charAt(0), s.charAt(i))) {
+				if (!isValidMatch(st.pop(), s.charAt(i))) {
 					return false;
 				}
 			}
